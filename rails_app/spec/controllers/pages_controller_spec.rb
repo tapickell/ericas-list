@@ -4,7 +4,7 @@ describe PagesController do
 	render_views
 
 	before(:each) do
-		@base_title = "Erica's List | "
+		@base_title = "Erica's List"
 	end
 
   describe "GET 'home'" do
@@ -15,7 +15,7 @@ describe PagesController do
 
 		it "should have the right title" do
 			get 'home'
-			response.should have_selector("title", :content => @base_title + "Home")
+			response.should have_selector('title', text: "Erica's List")
 		end
   end
 
@@ -27,7 +27,7 @@ describe PagesController do
 		
 		it "should have the right title" do
 			get 'contact'
-			response.should have_selector("title", :content => @base_title + "Contact")
+			response.should have_selector("title", :text => @base_title)
 		end
   end
 
@@ -39,7 +39,7 @@ describe PagesController do
 		
 		it "should have the right title" do
 			get 'about'
-			response.should have_selector("title", :content => @base_title + "About")
+			response.should have_selector("title", :text => @base_title)
 		end
 	end
 
@@ -51,7 +51,7 @@ describe PagesController do
 		
 		it "should have the right title" do
 			get 'help'
-			response.should have_selector("title", :content => @base_title + "Help")
+			response.should have_selector("title", :text => @base_title)
 		end
 	end
 

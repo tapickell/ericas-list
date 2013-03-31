@@ -7,7 +7,7 @@ gem 'rails', '3.2.13'
 
 gem 'sqlite3'
 
-
+gem 'haml'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -20,13 +20,18 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-group :development do
-	gem 'rspec-rails'
-end
+gem 'rspec-rails', :group => [:test, :development]
 
 group :test do
-	gem 'rspec'
-	gem 'webrat'
+	gem 'cucumber-rails'
+	gem 'factory_girl_rails'
+	gem 'database_cleaner'
+	gem 'guard-rspec'
+	gem 'guard-cucumber'
+	gem 'guard-livereload'
+	gem 'rb-fsevent'
+	gem 'capybara'
+	gem 'rb-inotify', '~> 0.9'
 end
 
 gem 'jquery-rails'

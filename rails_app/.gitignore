@@ -10,7 +10,8 @@
 # Ignore the default SQLite database.
 /db/*.sqlite3
 
-#.bundle
+# Ignore all logfiles and tempfiles.
+.bundle
 db/*.sqlite3*
 log/*.log
 *.log
@@ -20,5 +21,5 @@ doc/api
 doc/app
 *.swp
 *~
-.DS_Store Ignore all logfiles and tempfiles.
+.DS_Store
 *.box

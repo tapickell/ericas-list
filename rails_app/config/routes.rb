@@ -3,22 +3,15 @@ RailsApp::Application.routes.draw do
 
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
- #  get "pages/home"
 
- #  get "pages/contact"
-
-	# get "pages/about"
-
-	# get "pages/help"
-
- #  get "pages/signin"
+  get 'signup', to: 'users#new', as: 'signup'
+  get 'login', to: 'sessions#new', as: 'login'
+  get 'logout', to: 'sessions#destroy', as: 'logout'
 
   root to: 'pages#home'
   match '/contact', to: 'pages#contact'
   match '/about', to: 'pages#about'
-  match '/signin', to: 'sessions#new'
-  match '/signout', to: 'sessions#destroy', via: :delete
-  match '/signup', to: 'users#new'
+
   match '/help', to: 'pages#help'
   # The priority is based upon order of creation:
   # first created -> highest priority.

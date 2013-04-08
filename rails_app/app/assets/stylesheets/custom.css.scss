@@ -1,4 +1,4 @@
-@import "bootstrap";
+
 
 /* universal */
 
@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  padding-top: 60px;
+
 }
 
 section {
@@ -125,7 +125,7 @@ $grayMediumLight: #eaeaea;
 aside {
   section {
     padding: 10px 0;
-    border-top: 1px solid $grayLighter;
+    border-top: 1px solid;
     &:first-child {
       border: 0;
       padding-top: 0;

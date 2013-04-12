@@ -8,6 +8,7 @@
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
   <%= render 'layouts/shim' %>
 </head>
 <body>
@@ -19,9 +20,11 @@
 		<%= yield %>
 	</div>
 	<%= render 'layouts/footer' %>
-
-<!-- 	<p><%= debug(params) if Rails.env.development? %></p>
+  <h1>MyText</h1>
+  <script src='../assets/javascripts/myjavascript.js' ></script>
+  <p><%= debug(params) if Rails.env.development? %></p>
 	<p><%= debug @user if Rails.env.development? %></p>
-	<p><%= debug current_user if Rails.env.development? %></p> -->
+	<p><%= debug current_user if Rails.env.development? %></p>
+  <p><%= debug @current_page if Rails.env.development? %></p>
 </body>
 </html>

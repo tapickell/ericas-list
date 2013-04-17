@@ -6,7 +6,6 @@ class UsersController < ApplicationController
   def create
   	@user = User.new(params[:user])
   	if @user.save
-      # sign_in @user
       session[:user_id] = @user.id
   		redirect_to root_url, notice: "Welcome to your Erica's List account."
   	else
@@ -20,5 +19,9 @@ class UsersController < ApplicationController
 
   def show
   	@user = User.find(params[:id])
+  end
+
+  def destroy
+    # TODO - fill out the crud
   end
 end

@@ -5,4 +5,4 @@ Feature: Go to home page
 
 	Scenario: Start on home page
 		When I go to the home page
-		Then I should see "Home"
+		Then I should see "Erica's List"

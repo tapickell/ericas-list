@@ -4,5 +4,5 @@ When(/^I go to the home page$/) do
 end
 
 Then(/^I should see "(.*?)"$/) do |arg1|
-	
+	pending #assert that agr1 is in the h1 tag	
 end

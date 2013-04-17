@@ -8,17 +8,13 @@
       = link_to "Erica's List", '/', id: "logo"
       .nav-collapse.pull-right
         %ul.nav
-          %li= link_to "About",   '/about'
-          %li= link_to "Contact", '/contact'
+          %li= link_to "All Posts", posts_path unless current_page? posts_path
+          / need to remove this logic from the view and have user controller pass array with
+          / the dynamic links to be displayed in the view
           - if current_user
-            / -if !current_page?(url_for(:controller => 'users', :action => 'show'))
-            -if !controller.controller_name == 'users'
-              %li= link_to "Profile", current_user
-
+            %li= link_to "Create Post", new_post_path unless current_page? new_post_path 
+            %li= link_to "Profile", current_user unless current_page? current_user
             %li= link_to "Log out", session_path("current"), method: "delete"
           - else
             %li= link_to "Log in", new_session_path
             %li= link_to "Sign up", new_user_path
-
-/ current_page?(url_for(:controller => 'pages', :action => 'main')) 
-/- if controller.controller_name == 'pages' && controller.action_name == 'main'
